@@ -20,10 +20,7 @@ def get_gpu_info():
         pynvml.nvmlInit()
         device_count = pynvml.nvmlDeviceGetCount()
         gpu_info = []
-        
-        # for i in range(device_count):        
-        #     handle = pynvml.nvmlDeviceGetHandleByIndex(i)
-        
+        handle = pynvml.nvmlDeviceGetHandleByIndex(0)
         utilization = pynvml.nvmlDeviceGetUtilizationRates(handle)
         gpu_util = utilization.gpu  # GPU utilization percentage
 
