@@ -48,7 +48,7 @@ def get_gpu_info():
         return 0
 
 current_gpu_info = get_gpu_info()
-gpu_int_arr = list(range(current_gpu_info[0]["gpu_count"]))
+gpu_int_arr = [0]
 
 r = redis.Redis(host="redis", port=6379, db=0)
 
